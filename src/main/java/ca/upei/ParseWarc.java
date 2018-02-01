@@ -29,9 +29,9 @@ public class ParseWarc {
     }
 
     private static void printUsage() {
-        System.out.println("usage: java -jar Warc_Parser.jar url_to_warc_content object_pid");
+        System.out.println("usage: java -jar Warc_Parser-1.0-SNAPSHOT-jar-with-dependencies.jar url_to_warc_content object_pid");
         System.out.println("-------------");
-        System.out.println("example: java -jar Warc_Parser.jar http://localhost:8080/fedora/objects/islandora:1/datastreams/WARC_FILTERED/content islandora:1");
+        System.out.println("example: java -jar Warc_Parser-1.0-SNAPSHOT-jar-with-dependencies.jar http://localhost:8080/fedora/objects/islandora:1/datastreams/WARC_FILTERED/content islandora:1");
         System.out.println("-------------");
         System.out.println("description: this script assumes the solr server exists at http://localhost:8080/solr/collection1.  If it exists elsewhere you will need" +
                 " to set an env variable named Islandora_Solr_Server with a value of the URL that points to your solr server. ");
