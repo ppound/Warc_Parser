@@ -98,8 +98,12 @@ public class ParseWarc {
     ) throws SolrServerException, IOException {
         Document htmlDoc = Jsoup.parse(content);
         Elements body = htmlDoc.select("body");
+        Elements title = htmlDoc.select("title");
+        String titleContent = title.text();
         String bodyContent = body.text();
         SolrInputDocument doc = new SolrInputDocument();
+        doc.addField("warc_html_content_t", content);
+        doc.addField("warc_html_title", titleContent);
         doc.addField("warc_target_uri_s", targetUri);
         doc.addField("PID", pid + targetUri);
         doc.addField("WARC_PID_s", pid);
